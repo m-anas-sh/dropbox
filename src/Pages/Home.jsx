@@ -4,8 +4,8 @@ import Content from "../Components/Content";
 export default function Home() {
   return (
     <Fragment>
-      <Aside></Aside>
-      <Content></Content>
+      <Aside />
+      <Content />
     </Fragment>
   );
 }

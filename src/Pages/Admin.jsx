@@ -4,7 +4,7 @@ import AdminContent from "../Components/AdminContent";
 export default function Admin() {
   return (
     <Fragment>
-      <Aside></Aside>
+      <Aside />
       <AdminContent />
     </Fragment>
   );

@@ -1,4 +1,6 @@
 import { Fragment } from "react";
+import AddUserModal, { showAddUserModal } from "./AddUserModal";
+import EditUserModal, { showEditUserModal } from "./EditUserModal";
 export default function AdminContent() {
   return (
     <Fragment>
@@ -10,6 +12,7 @@ export default function AdminContent() {
 
               <button
                 type="button"
+                onClick={showAddUserModal}
                 class="space-x-2 text-gray-300 bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 flex items-center justify-center"
               >
                 <svg
@@ -68,11 +71,8 @@ export default function AdminContent() {
                   </th>
                   <td class="px-6 py-4">user@gmail.com</td>
                   <td class="px-6 py-4">Admin</td>
-                  <td class="px-6 py-4">
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                    >
+                  <td class="px-6 py-4" onClick={showEditUserModal}>
+                    <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                       Edit
                     </a>
                   </td>
@@ -82,6 +82,8 @@ export default function AdminContent() {
           </div>
         </div>
       </div>
+      <AddUserModal />
+      <EditUserModal />
     </Fragment>
   );
 }
